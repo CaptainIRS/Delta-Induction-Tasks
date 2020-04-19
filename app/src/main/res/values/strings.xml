@@ -31,4 +31,5 @@
     <string name="input_hint">Enter number…</string>
     <string name="streak">Streak</string>
     <string name="logo">Logo</string>
+    <string name="disclaimer">Reflects score from Challenge only</string>
 </resources>
