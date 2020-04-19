@@ -21,6 +21,6 @@
         android:linksClickable="true"
         android:text="@string/app_description"
         android:textColorLink="@color/colorPrimary"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
 </LinearLayout>
