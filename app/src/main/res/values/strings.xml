@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Dots and Boxes</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="clear">Clear</string>
+    <string name="color">Color</string>
+    <string name="undo">Undo</string>
+    <string name="play">Play</string>
+    <string name="number_of_players">Number of players</string>
+    <string name="number_of_columns">Number of columns</string>
+    <string name="number_of_rows">Number of rows</string>
+    <string name="about">Created by @CaptainIRS for Delta Induction Task 2</string>
+    <string name="icon">Icon</string>
+</resources>
