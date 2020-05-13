@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS complaints (
+  user VARCHAR(20),
+  complaint TEXT,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
