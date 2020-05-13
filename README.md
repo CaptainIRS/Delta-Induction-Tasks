@@ -10,6 +10,8 @@
 * Configuration may take upto 5 minutes or more
 * Visit soldier.io in the host browser
 
+*To view the Chief Commander portal, your Browser User Agent must contain "ChiefCommander"*
+
 ## Screenshots
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
