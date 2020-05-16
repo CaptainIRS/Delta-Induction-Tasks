@@ -13,7 +13,7 @@ function find_distance() {
 	lat_trans=$(bc <<< "scale=5; $lat - 28.7041")
 	lon_trans=$(bc <<< "scale=5; $lon - 77.1025")
 	dist=$(bc <<<"scale=5; sqrt($lat_trans*$lat_trans + $lon_trans*$lon_trans)" | awk '{printf "%09.5f\n", $0}')
-	echo $dist $2 $lat $lon >> $HOME/tmp	
+	echo $dist $2 $lat $lon >> /home/ChiefCommander/tmp	
 }
 
 echo "Finding nearest 10..."
