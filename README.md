@@ -14,15 +14,14 @@
 *To view the Chief Commander portal, your Browser User Agent must contain "ChiefCommander"*
 
 ## Screenshots
-|Tasks 1 and 2|||
-|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
+### Tasks 1 and 2
 | ![Imgur](https://i.imgur.com/z6J9iEc.png) | ![Imgur](https://i.imgur.com/AnnCJWj.png) | ![Imgur](https://i.imgur.com/R7IbVjd.png) |
+|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
 | ![Imgur](https://i.imgur.com/31jfouq.png) | ![Imgur](https://i.imgur.com/ZrY8GAe.png) | ![Imgur](https://i.imgur.com/AxcguNQ.png) |
 
-
-|Task 3||
-|:----------------------------------------:|:-----------------------------------------:|
+### Task 3
 | ![Imgur](https://i.imgur.com/rdYUS1B.png) | ![Imgur](https://i.imgur.com/YobvLTz.png) |
+|:----------------------------------------:|:-----------------------------------------:|
 | ![Imgur](https://i.imgur.com/K69rqHI.png) | ![Imgur](https://i.imgur.com/ma4ybll.png) |
 
 # Task Descriptions:
