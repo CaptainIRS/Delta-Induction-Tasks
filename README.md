@@ -16,13 +16,17 @@
 
 ## Screenshots
 ### Tasks 1 and 2
+|**Invalid URL**                            |**Soldier Portal**                         |**Troop Chief Portal**                     |
+|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
 | ![Imgur](https://i.imgur.com/z6J9iEc.png) | ![Imgur](https://i.imgur.com/AnnCJWj.png) | ![Imgur](https://i.imgur.com/R7IbVjd.png) |
-|:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
+|**Chief Commander Portal**                 |**Complaint Form**                         |**Complaints Lists(Available only to Chief Commander)**|
 | ![Imgur](https://i.imgur.com/31jfouq.png) | ![Imgur](https://i.imgur.com/ZrY8GAe.png) | ![Imgur](https://i.imgur.com/AxcguNQ.png) |
 
 ### Task 3
+|**Chat within Group**                      |**Private Chat**                           |
+|:-----------------------------------------:|:-----------------------------------------:|
 | ![Imgur](https://i.imgur.com/rdYUS1B.png) | ![Imgur](https://i.imgur.com/YobvLTz.png) |
-|:----------------------------------------:|:-----------------------------------------:|
+|**Different Group Chats simultaneously**   |**Chief Commander's Chat Window**          |
 | ![Imgur](https://i.imgur.com/K69rqHI.png) | ![Imgur](https://i.imgur.com/ma4ybll.png) |
 
 # Task Descriptions:
