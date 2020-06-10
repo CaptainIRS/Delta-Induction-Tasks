@@ -8,6 +8,7 @@
 * Run `docker-compose build`
 * Run `docker-compose up`
 
+### Usage
 * Visit soldier.io in the host browser
 * To SSH as any user, run `./login <user_name>`
 
