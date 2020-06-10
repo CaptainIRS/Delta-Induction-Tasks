@@ -1,6 +1,6 @@
 <?php 
 
-  $host     = "db";
+  $host     = "complaints_db";
   $user     = "db_user";
   $password = "cH13F_c0mM4nD3r";
   $database = "complaints_db";

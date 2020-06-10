@@ -1,15 +1,28 @@
 version: '3'
 services:
-  db:
+  complaints_db:
     image: mysql
-    container_name: db
+    container_name: complaints_db
     command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - ./db:/docker-entrypoint-initdb.d/
+      - ./complaints_db:/docker-entrypoint-initdb.d/
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=cH13F_c0mM4nD3r
       - MYSQL_DATABASE=complaints_db
+      - MYSQL_USER=db_user
+      - MYSQL_PASSWORD=cH13F_c0mM4nD3r
+
+  chat_db:
+    image: mysql
+    container_name: chat_db
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./chat_db:/docker-entrypoint-initdb.d/
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=cH13F_c0mM4nD3r
+      - MYSQL_DATABASE=chat_db
       - MYSQL_USER=db_user
       - MYSQL_PASSWORD=cH13F_c0mM4nD3r
 
@@ -19,7 +32,15 @@ services:
     volumes:
       - ./complaints_server/public_html:/var/www/html
     depends_on:
-      - db
+      - complaints_db
+
+  chat_server:
+    container_name: chat_server
+    build: ./chat_server/
+    volumes:
+      - ./chat_server/app:/app
+    depends_on:
+      - chat_db
 
   main_server:
     container_name: main_server
@@ -27,6 +48,7 @@ services:
     command: bash -c "./init.sh"
     ports:
       - "80:80"
+      - "22:22"
     volumes:
       - ./main_server/public_html:/var/www/soldier.io/public_html
     depends_on:

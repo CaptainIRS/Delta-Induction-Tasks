@@ -30,6 +30,7 @@ if [ ! -e $STARTED ]; then
 	a2enmod rewrite
 	a2enmod proxy
 	a2enmod proxy_http
+	a2enmod proxy_wstunnel
 	a2ensite soldier.io
 
 	#Configure cron-jobs
@@ -38,9 +39,12 @@ if [ ! -e $STARTED ]; then
 	touch /etc/cron.d/attendance
 	echo "0 0 * * * /scripts/autoSchedule.sh /position.log" >> /etc/cron.d/position
 	echo "0 6 * * * /scripts/attendance.sh /attendance.log" >> /etc/cron.d/attendance
+	
 fi
 
 echo "127.0.0.1		soldier.io" >> /etc/hosts
+/usr/sbin/sshd
+service ssh restart
 /etc/init.d/apache2 start
 /etc/init.d/apache2 restart
 apache2 -DFOREGROUND -v
