@@ -1,4 +1,4 @@
-# Delta SysAdmin Task 2
+# Delta SysAdmin All Tasks
 ## Install Instructions
 * Clone the repository
 * cd into the repository
