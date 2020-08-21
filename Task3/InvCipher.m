@@ -1,6 +1,6 @@
 function [out] = InvCipher(in)
-    Nb = Config.Nk;
-    Nr = Config.Nk;
+    Nb = Config.Nb;
+    Nr = Config.Nr;
     
     w = KeyExpansion();
     
