@@ -27,6 +27,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 	} else if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['remember_login'])) {
         if(check_user($_POST['username'], $_POST['password']) == TRUE) {    
 			if($_POST['remember_login'] == 'true') {
+				# Cookie is set to expire after 1 day
 			   	$expiry = time() + 24*60*60;	
             	setcookie('username', $_POST['username'], $expiry);
         	    setcookie('password', $_POST['password'], $expiry);
@@ -67,7 +68,7 @@ if(isset($_COOKIE['username'])
             }
         </style>
     </head>
-    <body>
+    <body style="background-color:lightgray">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
          <div class="container-fluid">
             <a href="#" class="navbar-brand mr-3">Anything.com</a>
@@ -88,7 +89,7 @@ if(isset($_COOKIE['username'])
                   ';} ?>
                   <?php if($loggedin === 'true') { echo '
                   <li class="nav-item">
-                     <a class="nav-link mr-2" href="#">Welcome,'. $user .'</a>
+                     <a class="nav-link mr-2" href="#">Welcome, '. $user .'</a>
                   </li>
                   <li class="nav-item">
                      <button id="logout" class="btn btn-danger navbar-btn mr-1">Logout</button>
@@ -98,7 +99,7 @@ if(isset($_COOKIE['username'])
             </div>
          </div>
       </nav>
-        <div class="modal" id="registerModal">
+        <div class="modal fade" id="registerModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="" id="registrationForm">
@@ -130,7 +131,7 @@ if(isset($_COOKIE['username'])
                 </div>
             </div>
         </div>
-        <div class="modal" id="loginModal">
+        <div class="modal fade" id="loginModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form action="" id="loginForm">
@@ -167,6 +168,9 @@ if(isset($_COOKIE['username'])
                 </div>
             </div>
         </div>
+		<div class="h-75 d-flex align-items-center justify-content-center">
+			<h1><?php if($loggedin === 'true') { echo "Hi ". $user; } else { echo "Hi Guest!" ;} ?></h1>
+		</div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
