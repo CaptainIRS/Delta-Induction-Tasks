@@ -26,14 +26,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 		}
 	} else if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['remember_login'])) {
         if(check_user($_POST['username'], $_POST['password']) == TRUE) {    
-            
-            setcookie('username', $_POST['username']);
-            setcookie('password', $_POST['password']);
-            setcookie('remember_login', $_POST['remember_login'] ? 'true' : 'false');
+			if($_POST['remember_login'] == 'true') {
+			   	$expiry = time() + 24*60*60;	
+            	setcookie('username', $_POST['username'], $expiry);
+        	    setcookie('password', $_POST['password'], $expiry);
+			}
+        	$user = $_POST['username'];
             $loggedin = 'true';
-            $user = $_POST['username'];
-            
-        } else {
+		} else {
             echo '<script>alert("Incorrect username or password!")</script>';
         }
     } else {
@@ -41,8 +41,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-if(isset($_COOKIE['remember_login'])
-	&& isset($_COOKIE['username'])
+if(isset($_COOKIE['username'])
 	&& isset($_COOKIE['password'])) {
 	if(check_user($_COOKIE['username'], $_COOKIE['password']) === TRUE) {
 		$loggedin = 'true';
@@ -58,7 +57,6 @@ if(isset($_COOKIE['remember_login'])
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
         <title>Anything Signin</title>
@@ -123,18 +121,6 @@ if(isset($_COOKIE['remember_login'])
                                    <input id="reg_hint" type="text" class="form-control" placeholder="Hint" aria-label="Hint">
                                 </div>
                             </div>
-                            <div id="regSuccessAlert" class="alert alert-success alert-dismissible fade collapse" role="alert">
-                                <strong>Success!</strong> Your complaint has been submitted!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div id="regErrorAlert" class="alert alert-danger alert-dismissible fade collapse" role="alert">
-                                <strong>Error!</strong> Your complaint couldn't be submitted
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#registrationModal">Submit</button>
@@ -171,18 +157,6 @@ if(isset($_COOKIE['remember_login'])
                                         <input id="remember_me" type="checkbox" value="remember-me"> Remember me
                                     </label>
                                 </div>
-                            </div>
-                            <div id="regSuccessAlert" class="alert alert-success alert-dismissible fade collapse" role="alert">
-                                <strong>Success!</strong> Your complaint has been submitted!
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div id="regErrorAlert" class="alert alert-danger alert-dismissible fade collapse" role="alert">
-                                <strong>Error!</strong> Your complaint couldn't be submitted
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
                             </div>
                         </div>
                         <div class="modal-footer">

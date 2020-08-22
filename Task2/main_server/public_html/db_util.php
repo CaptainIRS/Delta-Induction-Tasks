@@ -25,7 +25,6 @@
   function is_user_unique($username) {
     global $mysqli;
   	$stmt = mysqli_query($mysqli, "SELECT username FROM users WHERE username = '$username' LIMIT 1");
-	$rows = mysqli_fetch_assoc($stmt);
 	if(mysqli_num_rows($stmt) < 1) {
 		return TRUE;
 	}
