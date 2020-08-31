@@ -4,3 +4,9 @@
 [submodule "MentorshipTasks/WebDev/FastCount"]
 	path = MentorshipTasks/WebDev/FastCount
 	url = https://github.com/CaptainIRS/FastCount
+[submodule "MentorshipProjects/hacker-plus-theme"]
+	path = MentorshipProjects/hacker-plus-theme
+	url = https://github.com/CaptainIRS/hacker-plus-theme
+[submodule "MentorshipProjects/hacker-plus-template"]
+	path = MentorshipProjects/hacker-plus-template
+	url = https://github.com/CaptainIRS/hacker-plus-template
