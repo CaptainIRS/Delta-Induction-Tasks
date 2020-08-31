@@ -1,3 +1,6 @@
 [submodule "MentorshipTasks/WebDev/ColorSwitch"]
 	path = MentorshipTasks/WebDev/ColorSwitch
 	url = https://github.com/CaptainIRS/ColorSwitch
+[submodule "MentorshipTasks/WebDev/FastCount"]
+	path = MentorshipTasks/WebDev/FastCount
+	url = https://github.com/CaptainIRS/FastCount
