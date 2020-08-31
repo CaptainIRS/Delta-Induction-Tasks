@@ -10,3 +10,6 @@
 [submodule "MentorshipProjects/hacker-plus-template"]
 	path = MentorshipProjects/hacker-plus-template
 	url = https://github.com/CaptainIRS/hacker-plus-template
+[submodule "OnsiteTasks/SysAdmin/Task3"]
+	path = OnsiteTasks/SysAdmin/Task3
+	url = https://github.com/CaptainIRS/AES-Matlab
